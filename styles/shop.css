@@ -1,0 +1,319 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --body-color: white;
+  --nav-footer-color: #393939;
+  --body-font-color: black;
+  --nav-footer-font-color: white;
+  --font-size: 1rem;
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--body-color);
+  font-size: var(--font-size);
+  color: var(--body-font-color);
+  font-family: var(--font-family);
+}
+
+/* A COPIER / COLLER - début nav */
+
+.title-for-mobile {
+  display: none;
+  position: fixed;
+  top: 0px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  height: 70px;
+  color: var(--font-color);
+  background-color: var(--nav-footer-color);
+  z-index: 2000;
+}
+
+.nav-menu {
+  display: flex;
+  width: 33vh;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-menu a:hover {
+  color: lightgray;
+}
+
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-menu ul li {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+.nav-menu ul li a:hover::after {
+  width: 100%;
+  color: black;
+}
+
+.nav-menu ul li a::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  width: 0%;
+  height: 2px;
+  -webkit-transition: width 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-menu ul li:first-child {
+  display: none;
+}
+
+.nav-purple-logo {
+  display: flex;
+  justify-content: center;
+  width: 33vh;
+}
+
+.nav-purple-sneakers-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.nav-basket-search-logos {
+  display: flex;
+  justify-content: flex-end;
+  width: 33vh;
+}
+
+.nav-basket-search-logos img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-menu-hamburger {
+  display: none;
+}
+
+.header-burger {
+  display: none;
+}
+
+.logoburger {
+  display: none;
+}
+
+/* FIN NAV */
+
+section {
+  position: relative;
+  width: 100%;
+  top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1024px;
+  grid-gap: 10px;
+  /* To be explained... */
+  padding-bottom: 4.5rem;
+}
+
+h3 {
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.shop-title {
+  display: none;
+}
+
+.admin-form {
+  display: none;
+  position: relative;
+  top: 70px;
+}
+
+.search-form {
+  position: relative;
+  top: 70px;
+}
+
+.search-form input {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.active {
+  display: inline;
+}
+
+.opacity_light {
+  opacity: 0.5;
+}
+
+.card-sneaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--color);
+  width: 100%;
+  padding: 10px;
+}
+
+.card-sneaker img {
+  width: 90%;
+  height: auto;
+  display: block;
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 60%;
+  min-width: 300px;
+  height: 40%;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+}
+
+#modal img {
+  width: 50%;
+  height: auto;
+}
+
+.modal-details {
+  padding: 10px;
+}
+
+.no-result {
+  display: none;
+  position: fixed;
+  text-align: center;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-result img {
+  width: 50%;
+}
+
+/* A COPIER / COLLER Footer */
+
+footer {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: var(--nav-footer-color);
+  color: var(--font-color);
+  height: 70px;
+  justify-content: start;
+  bottom: 0px;
+  align-items: center;
+}
+
+footer img {
+  width: 40px;
+  margin: 10px;
+}
+/* FIN FOOTER */
+
+@media screen and (max-width: 500px) {
+  .sneaker-img {
+    display: none;
+  }
+
+  .shop-title {
+    display: block;
+  }
+  /* A COPIER / COLLER POUR MOBILE */
+
+  .title-for-mobile {
+    display: block;
+  }
+
+  .nav-menu-hamburger {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-bar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 25%;
+    top: 40px;
+    left: 10px;
+    margin: 10px;
+  }
+
+  .nav-bar.active {
+    display: flex;
+    background-color: white;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--nav-footer-color);
+    z-index: 2000;
+  }
+
+  .nav-menu ul li:first-child {
+    display: block;
+  }
+
+  .nav-basket-search-logos {
+    display: none;
+  }
+
+  .nav-purple-logo {
+    display: none;
+  }
+
+  /* FIN COPIER / COLLER POUR MOBILE */
+}

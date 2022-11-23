@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=styles/contact.css />
+    <title>Document</title>
+</head>
+<body>
+  <img
+  class="nav-menu-hamburger"
+  src="./assets/menu-hamburger.png"
+  alt="menu hamburger"
+/>
+<nav class="nav-bar">
+  <div class="nav-menu">
+    <ul>
+      <li>
+        <a href="./index.html">Home</a>
+      </li>
+      <li>
+        <a href="./shop.html">Shop</a>
+      </li>
+      <li>
+        <a href="./team.html">Team</a>
+      </li>
+      <li>
+        <a href="./contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="nav-purple-logo">
+    <a href="./index.html">
+      <img
+        src="./assets/logo1.png"
+        alt="logo purple sneakers"
+        class="nav-purple-sneakers-logo"
+      />
+    </a>
+  </div>
+  <div class="nav-basket-search-logos">
+    <img src="./assets/search.png" alt="search logo" />
+    <img src="./assets/panier.png" alt="basket logo" />
+  </div>
+</nav>
+
+  <section class=section-contact>
+    
+    <div class=formulaire>
+      
+      <form
+      action="#"
+      method="post"
+      onsubmit="var element = document.getElementById('myName').value;
+    alert('Merci ' +element+ ', nous vous recontacterons dans les meileurs délais ');return false;"
+  >
+
+  <h2>Choose:</h2>
+<select name="sneakers" id=sneakers>
+    <option value="">--Please choose an option--</option>
+    <option value="livraison">Livraison</option>
+    <option value="retour">Retour et remboursement</option>
+    <option value="commande">Commande</option>
+    <option value="payment">Paiement</option>
+</select>
+
+  <h2>Name:</h2>
+  <input
+  type=text
+  id=myName
+  class=input
+  placeholder= "Entrez votre nom"
+  required
+  />
+  
+  <h2>Email:</h2>
+  <input
+  type=text
+  id=myEmail
+  class=input
+  placeholder="Entrez votre e-mail"
+  />
+  
+  <h2>Message:</h2>
+  <textarea id=myMessage placeholder="Entrez votre message" rows="4"></textarea>
+  <!-- <input id=myMessage placeholder="Entrez votre message" rows="4"></input> -->
+  
+  <br /> 
+  
+  <input type=submit id=formsubmit value=Envoyer />
+</form>
+</div>
+<div class="section-img-sneaker">
+  <img src="assets/photo-contact.png" alt=chaussure/>
+</div>
+
+
+<h1 class="contact">contact</h1>
+
+</section>
+
+<footer>
+  <a
+    href="https://www.youtube.com/watch?v=hD3WqYhopsw&ab_channel=SNICKERS"
+    target="_blank"
+  >
+    <img src="./assets/youtube-logo.png" />
+  </a>
+
+  <a href="https://www.instagram.com/snickers/?hl=fr" target="_blank">
+    <img src="assets/icone2Insta.PNG" />
+  </a>
+  <a href="https://twitter.com/?lang=fr" target="_blank">
+    <img src="assets/iconeTwitter.PNG" />
+  </a>
+</footer>
+<script src=js/contact.js></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
